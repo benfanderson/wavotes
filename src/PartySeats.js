@@ -28,31 +28,32 @@ function PartySeats(props) {
     return (
       <div className="partyContainer">
         <h2>{party}</h2>
-        {seatsArray.map(
-          (seat, index) => (
+        <div className={styles.seatsContainer}>
+          {seatsArray.map(
+            (seat, index) => (
             // eslint-disable-next-line react/no-array-index-key
-            <div key={index} className={styles.seat}>
-              <h3>{seat.name}</h3>
-              <br />
-              <Autocomplete
-                value={seat.party}
-                onChange={(event, newValue) => {
-                  const updatedSeat = seat;
-                  updatedSeat.party = newValue;
-                  const updatedSeats = seats.map((mappedSeat) => (
-                    mappedSeat.name === updatedSeat.name ? updatedSeat : mappedSeat));
-                  setSeats(updatedSeats);
-                }}
-                disableClearable
-                inputValue={seat.party}
-                options={parties(seat.nationalsCandidate)}
-                style={{ width: 127 }}
+              <div key={index} className={styles.seat}>
+                <h3>{seat.name}</h3>
+                <Autocomplete
+                  className={styles.seatSelection}
+                  value={seat.party}
+                  onChange={(event, newValue) => {
+                    const updatedSeat = seat;
+                    updatedSeat.party = newValue;
+                    const updatedSeats = seats.map((mappedSeat) => (
+                      mappedSeat.name === updatedSeat.name ? updatedSeat : mappedSeat));
+                    setSeats(updatedSeats);
+                  }}
+                  disableClearable
+                  inputValue={seat.party}
+                  options={parties(seat.nationalsCandidate)}
                 // eslint-disable-next-line react/jsx-props-no-spreading
-                renderInput={(params) => <TextField {...params} size="small" variant="standard" />}
-              />
-            </div>
-          ),
-        )}
+                  renderInput={(params) => <TextField {...params} size="small" variant="standard" />}
+                />
+              </div>
+            ),
+          )}
+        </div>
       </div>
     );
   }
