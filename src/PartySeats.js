@@ -15,12 +15,12 @@ function PartySeats(props) {
   const { seats, party, setSeats } = props;
 
   const seatsArray = [];
-  seats.map(
-    // eslint-disable-next-line array-callback-return
+
+  seats.forEach(
     (seat) => {
-      // eslint-disable-next-line no-unused-expressions
-      seat.party === party
-            && seatsArray.push(seat);
+      if (seat.party === party) {
+        seatsArray.push(seat);
+      }
     },
   );
 
@@ -39,17 +39,16 @@ function PartySeats(props) {
                 onChange={(event, newValue) => {
                   const updatedSeat = seat;
                   updatedSeat.party = newValue;
-                  // eslint-disable-next-line no-shadow
-                  const updatedSeats = seats.map((seat) => (
-                    seat.name === updatedSeat.name ? updatedSeat : seat));
+                  const updatedSeats = seats.map((mappedSeat) => (
+                    mappedSeat.name === updatedSeat.name ? updatedSeat : mappedSeat));
                   setSeats(updatedSeats);
                 }}
                 disableClearable
                 inputValue={seat.party}
                 options={parties(seat.nationalsCandidate)}
-                style={{ width: 127, height: 40 }}
+                style={{ width: 127 }}
                 // eslint-disable-next-line react/jsx-props-no-spreading
-                renderInput={(params) => <TextField {...params} variant="outlined" />}
+                renderInput={(params) => <TextField {...params} size="small" variant="standard" />}
               />
             </div>
           ),
