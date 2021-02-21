@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
+import styles from './styles.css';
 
 const parties = (nationalsCandidate) => {
   if (nationalsCandidate === true) {
@@ -30,7 +31,7 @@ function PartySeats(props) {
         {seatsArray.map(
           (seat, index) => (
             // eslint-disable-next-line react/no-array-index-key
-            <div key={index} className="seat">
+            <div key={index} className={styles.seat}>
               <h3>{seat.name}</h3>
               <br />
               <Autocomplete
