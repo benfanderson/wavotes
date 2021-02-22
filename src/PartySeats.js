@@ -26,14 +26,14 @@ function PartySeats(props) {
 
   if (seatsArray.length > 0) {
     return (
-      <div className="partyContainer">
+      <div className={styles.partyContainer}>
         <h2>{party}</h2>
         <div className={styles.seatsContainer}>
           {seatsArray.map(
             (seat, index) => (
             // eslint-disable-next-line react/no-array-index-key
               <div key={index} className={styles.seat}>
-                <h3>{seat.name}</h3>
+                <h3 className={styles.seatName}>{seat.name}</h3>
                 <Autocomplete
                   className={styles.seatSelection}
                   value={seat.party}
