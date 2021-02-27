@@ -35,21 +35,26 @@
     border: 2px solid rgb(243, 109, 109)
   }
   .seatsContainer{
-    display: flex; 
+    /* display: flex; 
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 30%);
+    grid-gap: 0.8rem;
     justify-content: space-between;
   }
 
   .seat {
     display: inline-block;
+    padding: 0.7vh;
     margin-bottom: 5%;
-    width: 32%;
+    width: 88%;
+    background-color: #cee6fa;
   }
 
   .seatName {
-    font-size: 1em;
-    height: 7vh;
+    font-size: 0.9em;
+    height: 6vh;
   }
   
   h2 {

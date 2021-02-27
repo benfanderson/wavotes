@@ -48,7 +48,7 @@ function PartySeats(props) {
                   inputValue={seat.party}
                   options={parties(seat.nationalsCandidate)}
                 // eslint-disable-next-line react/jsx-props-no-spreading
-                  renderInput={(params) => <TextField {...params} size="small" variant="standard" />}
+                  renderInput={(params) => <TextField {...params} size="small" label="Change Seat" variant="outlined" />}
                 />
               </div>
             ),
