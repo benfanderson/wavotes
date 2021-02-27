@@ -27,7 +27,7 @@ function PartySeats(props) {
   if (seatsArray.length > 0) {
     return (
       <div className={styles.partyContainer}>
-        <h2>{party}</h2>
+        <h2 className={styles.partyName}>{party}</h2>
         <div className={styles.seatsContainer}>
           {seatsArray.map(
             (seat, index) => (
