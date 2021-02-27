@@ -11,6 +11,15 @@ const parties = (nationalsCandidate) => {
   return ['Labor', 'Liberal'];
 };
 
+const partyColour = (party) => {
+  if (party === 'Labor') {
+    return '#DE3533';
+  } if (party === 'Liberal') {
+    return '#0047AB';
+  }
+  return '#006644';
+};
+
 function PartySeats(props) {
   const { seats, party, setSeats } = props;
 
@@ -26,7 +35,7 @@ function PartySeats(props) {
 
   if (seatsArray.length > 0) {
     return (
-      <div className={styles.partyContainer}>
+      <div className={styles.partyContainer} style={{ border: `2px solid ${partyColour(party)}` }}>
         <h2 className={styles.partyName}>{party}</h2>
         <div className={styles.seatsContainer}>
           {seatsArray.map(

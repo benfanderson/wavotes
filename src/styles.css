@@ -4,7 +4,6 @@
   }
 
   body {
-    background-color: #cee6fa;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -29,10 +28,8 @@
   }
 
   .partyContainer{
-    background-color: #f8f6f6;
     padding: 1.5%;
     margin-bottom: 3%;
-    border: 2px solid rgb(243, 109, 109)
   }
   .seatsContainer{
     /* display: flex; 
@@ -49,7 +46,7 @@
     padding: 0.7vh;
     margin-bottom: 5%;
     width: 88%;
-    background-color: #cee6fa;
+    background-color: #d5e6f3;
   }
 
   .seatName {
@@ -74,6 +71,11 @@
       margin-bottom: 2%;
     }
 
+    .partyContainer{
+      padding: 0.9%;
+      margin-bottom: 1.5%;
+    }
+
     .partyName{
       font-size: 2em;
       margin-bottom: 1%;
@@ -93,7 +95,10 @@
   @media only screen and (min-width: 1024px) {
     .title{
       font-size: 3em;
-      margin-bottom: 1%;
+      margin-bottom: 0.5%;
+    }
+    .blurb{
+      margin-bottom: 0.7%;
     }
     
     .seatsContainer{
