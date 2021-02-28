@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React, { useState } from 'react';
 import seatsArray from './seatsArray';
 import PartySeats from './PartySeats';
@@ -27,16 +28,17 @@ function App() {
     } if (liberal.length > 29) {
       electionResult = `Liberal majority of ${liberal.length - 29}`;
     } if (labor.length < 30 && liberal.length < 30) {
-      electionResult = 'Hung parliament, however the Liberals could form government if they entered into a coalition with the Nationals';
+      electionResult = `Hung parliament, however if the Liberals and Nationals formed a coalition, 
+      they would have a majority of ${(liberal.length + nationals.length) - 29}`;
     }
     return electionResult;
   }
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}> WA Votes 2021</h1>
+      <h1 className={styles.title}> WA VOTES</h1>
       <p className={styles.result}>{result()}</p>
-      <p className={styles.blurb}>Click on a seat to change the party</p>
+      <p className={styles.blurb}>How will WA vote in the 2021 election? Change some seats below to see how it will effect the overall result. </p>
       <PartySeats seats={seats} setSeats={setSeats} party="Labor" />
       <PartySeats seats={seats} setSeats={setSeats} party="Liberal" />
       <PartySeats seats={seats} setSeats={setSeats} party="Nationals" />
