@@ -34,7 +34,7 @@ function App() {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}> Pick your 2021 WA state election parliament</h1>
+      <h1 className={styles.title}> WA Votes 2021</h1>
       <p className={styles.result}>{result()}</p>
       <p className={styles.blurb}>Click on a seat to change the party</p>
       <PartySeats seats={seats} setSeats={setSeats} party="Labor" />
