@@ -14,10 +14,6 @@
   .container {
     width: 96%;
     margin: auto;
-    display: flex; 
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between; 
   }
   
   .title{
@@ -31,7 +27,7 @@
     width: 100%;
     font-size: 1.3em;
     text-align:center;
-    margin-bottom: 1%;
+    margin-bottom: 2vh;
   }
 
   .blurb{
@@ -41,37 +37,46 @@
     margin-bottom: 3%;
   }
 
+  .partiesDivContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0.6rem;
+    justify-content: space-between;
+
+  }
+
   .partyContainer{
-    width: 30%;
+    width: 87%;
     height: auto;
-    padding: 0.9%;
+    padding: 1.3vw;
     margin-bottom: 3%;
   }
   .seatsContainer{
-    /* display: flex; 
+    display: flex; 
     flex-direction: row;
-    flex-wrap: wrap; */
+    flex-wrap: wrap;
     /* display: grid;
-    grid-template-columns: repeat(auto-fill, 30%);
+    grid-template-columns: repeat(auto-fill, 90%);
     grid-gap: 0.8rem;
     justify-content: space-between; */
   }
 
   .seat {
     display: inline-block;
-    padding: 0.7vh;
-    margin-bottom: 5%;
-    width: 90%;
+    padding: 0.7vw;
+    margin-bottom: 1vh;
+    width: 100%;
     background-color: #d5e6f3;
   }
 
   .seatName {
     font-size: 0.9em;
-    height: 6vh;
+    height: 5.5vh;
   }
   
-  h2 {
-    margin-bottom: 3%;
+  .partyName {
+    font-size: 1.3em;
+    margin-bottom: 4%;
   }
   
   

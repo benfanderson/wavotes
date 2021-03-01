@@ -39,9 +39,11 @@ function App() {
       <h1 className={styles.title}> WA VOTES</h1>
       <p className={styles.blurb}>How will WA vote in the 2021 election? Change some seats below to see how it will effect the overall result. </p>
       <p className={styles.result}>{result()}</p>
-      <PartySeats seats={seats} setSeats={setSeats} party="Labor" />
-      <PartySeats seats={seats} setSeats={setSeats} party="Liberal" />
-      <PartySeats seats={seats} setSeats={setSeats} party="Nationals" />
+      <div className={styles.partiesDivContainer}>
+        <PartySeats seats={seats} setSeats={setSeats} party="Labor" />
+        <PartySeats seats={seats} setSeats={setSeats} party="Liberal" />
+        <PartySeats seats={seats} setSeats={setSeats} party="Nationals" />
+      </div>
     </div>
 
   );
