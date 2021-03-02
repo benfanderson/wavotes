@@ -36,7 +36,9 @@ function PartySeats(props) {
   if (seatsArray.length > 0) {
     return (
       <div className={styles.partyContainer} style={{ border: `2px solid ${partyColour(party)}` }}>
-        <h2 className={styles.partyName}>{party}</h2>
+        <h2 className={styles.partyName}>
+          {`${party} - ${seatsArray.length} ${seatsArray.length > 1 ? 'seats' : 'seat'}` }
+        </h2>
         <div className={styles.seatsContainer}>
           {seatsArray.map(
             (seat, index) => (
