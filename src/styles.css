@@ -42,7 +42,6 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 0.6rem;
     justify-content: space-between;
-
   }
 
   .partyContainer{
@@ -92,8 +91,19 @@
       font-size: 1.75em;
     }
 
+    .blurb{
+      font-size: 1em;
+      margin-bottom: 1%;
+    }
+
+    .partiesDivContainer{
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 1rem;
+    }
+
     .partyContainer{
-      padding: 0.9%;
+      width: 93%;
+      padding: 1vw;
       margin-bottom: 1.5%;
     }
 
@@ -103,7 +113,13 @@
     }
 
     .seatsContainer{
-      grid-template-columns: repeat(auto-fill, 18%);
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 47%);
+      justify-content: space-between;
+    }
+
+    .seat {
+      width: 90%;
     }
 
     .seatName{
