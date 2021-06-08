@@ -1,0 +1,75 @@
+@use 'base';
+
+$seat-background: #d5e6f3;
+
+.partyContainer{
+    width: 87%;
+    height: auto;
+    padding: 1.3vw;
+    margin-bottom: 1%;
+}
+
+.seatsContainer{
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.seat {
+    display: inline-block;
+    padding: 0.7vw;
+    margin-bottom: 1vh;
+    width: 100%;
+    background-color: $seat-background
+}
+
+.seatName {
+    font-size: 0.9em;
+    height: 6.2vh;
+}
+
+.partyName {
+    font-size: 1.3em;
+    margin-bottom: 4%;
+}
+
+/*View for tablet*/
+@media only screen and (min-width: 479px) {
+
+    .partyContainer{
+        width: 93%;
+        padding: 1vw;
+    }
+
+    .partyName{
+        font-size: 2em;
+        margin-bottom: 1%;
+    }
+
+    .seatsContainer{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 47%);
+        justify-content: space-between;
+    }
+
+    .seat {
+        width: 90%;
+    }
+
+    .seatName{
+        height:5vh;
+    }
+}
+/*View for Desktop*/
+@media only screen and (min-width: 1024px) {
+    
+    .seatsContainer{
+      grid-template-columns: repeat(auto-fill, 32%);
+      grid-gap: 0.2rem;
+    }
+  
+    .seat {
+      width: 85%;
+    }
+  
+}
