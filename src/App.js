@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import seatsArray from './seatsArray';
 import PartySeats from './PartySeats';
-import styles from './styles.css';
+import './styles.scss';
 
 function App() {
   const [seats, setSeats] = useState(seatsArray);
@@ -35,11 +35,11 @@ function App() {
   }
 
   return (
-    <div className={styles.container}>
-      <h1 className={styles.title}> WA VOTES</h1>
-      <p className={styles.blurb}>How will WA vote in the 2021 election? Change some seats below to see how it will effect the overall result. </p>
-      <p className={styles.result}>{result()}</p>
-      <div className={styles.partiesDivContainer}>
+    <div id="container">
+      <h1 id="title"> WA VOTES</h1>
+      <p id="blurb">How will WA vote in the 2021 election? Change some seats below to see how it will effect the overall result. </p>
+      <p id="result">{result()}</p>
+      <div id="partiesDivContainer">
         <PartySeats seats={seats} setSeats={setSeats} party="Labor" />
         <PartySeats seats={seats} setSeats={setSeats} party="Liberal" />
         <PartySeats seats={seats} setSeats={setSeats} party="Nationals" />

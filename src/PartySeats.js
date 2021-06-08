@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
-import styles from './styles.css';
+import './styles.scss';
 
 const parties = (nationalsCandidate) => {
   if (nationalsCandidate === true) {
@@ -35,18 +35,18 @@ function PartySeats(props) {
 
   if (seatsArray.length > 0) {
     return (
-      <div className={styles.partyContainer} style={{ border: `2px solid ${partyColour(party)}` }}>
-        <h2 className={styles.partyName}>
+      <div className="partyContainer" style={{ border: `2px solid ${partyColour(party)}` }}>
+        <h2 className="partyName">
           {`${party} - ${seatsArray.length} ${seatsArray.length > 1 ? 'seats' : 'seat'}` }
         </h2>
-        <div className={styles.seatsContainer}>
+        <div className="seatsContainer">
           {seatsArray.map(
             (seat, index) => (
             // eslint-disable-next-line react/no-array-index-key
-              <div key={index} className={styles.seat}>
-                <h3 className={styles.seatName}>{seat.name}</h3>
+              <div key={index} className="seat">
+                <h3 className="seatName">{seat.name}</h3>
                 <Autocomplete
-                  className={styles.seatSelection}
+                  className="seatSelection"
                   value={seat.party}
                   onChange={(event, newValue) => {
                     const updatedSeat = seat;

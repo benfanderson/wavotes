@@ -11,33 +11,33 @@
     -moz-osx-font-smoothing: grayscale;
   }
   
-  .container {
+  #container {
     width: 96%;
     margin: auto;
   }
   
-  .title{
+  #title{
     width: 100%;
     font-size: 2em;
     text-align:center;
     margin-bottom: 1%;
   }
 
-  .result {
+  #result {
     width: 100%;
     font-size: 1.3em;
     text-align:center;
     margin-bottom: 2vh;
   }
 
-  .blurb{
+  #blurb{
     width: 100%;
     text-align:center;
     font-size: 0.8em;
     margin-bottom: 3%;
   }
 
-  .partiesDivContainer{
+  #partiesDivContainer{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 0.6rem;
@@ -78,21 +78,21 @@
   /*View for tablet*/
   @media only screen and (min-width: 479px) {
 
-    .title{
+    #title{
       font-size: 4em;
       margin-bottom: 0.1%;
     }
 
-    .result{
+    #result{
       font-size: 1.75em;
     }
 
-    .blurb{
+    #blurb{
       font-size: 1em;
       margin-bottom: 1%;
     }
 
-    .partiesDivContainer{
+    #partiesDivContainer{
       grid-template-columns: 1fr 1fr 1fr;
       grid-gap: 1rem;
     }
@@ -127,7 +127,7 @@
    /*View for Desktop*/
   @media only screen and (min-width: 1024px) {
     
-    .blurb{
+    #blurb{
       font-size: 1em;
       margin-bottom: 1%;
     }
