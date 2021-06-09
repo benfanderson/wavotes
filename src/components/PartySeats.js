@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
-import './partySeatsStyle.scss';
+import '../styles/partySeatsStyle.scss';
 
 const parties = (nationalsCandidate) => {
   if (nationalsCandidate === true) {

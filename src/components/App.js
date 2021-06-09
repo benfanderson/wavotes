@@ -1,8 +1,8 @@
 /* eslint-disable max-len */
 import React, { useState } from 'react';
-import seatsArray from './seatsArray';
+import seatsArray from '../seatsArray';
 import PartySeats from './PartySeats';
-import './styles.scss';
+import '../styles/_base.scss';
 
 function App() {
   const [seats, setSeats] = useState(seatsArray);
