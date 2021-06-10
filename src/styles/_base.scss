@@ -11,6 +11,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@media (prefers-color-scheme: dark ) {
+  body {
+    background: #302f2f;;
+  }
+  #title, #result, #blurb, .partyName  {
+    color: #ffffff
+  }
+}
+
 #container {
   width: 96%;
   margin: auto;
