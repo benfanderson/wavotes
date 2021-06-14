@@ -2,23 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
+import { partyCandidates, partyColour } from '../helper';
 import '../styles/partySeatsStyle.scss';
-
-const parties = (nationalsCandidate) => {
-  if (nationalsCandidate === true) {
-    return ['Labor', 'Liberal', 'Nationals'];
-  }
-  return ['Labor', 'Liberal'];
-};
-
-const partyColour = (party) => {
-  if (party === 'Labor') {
-    return '#DE3533';
-  } if (party === 'Liberal') {
-    return '#0047AB';
-  }
-  return '#006644';
-};
 
 function PartySeats(props) {
   const { seats, party, setSeats } = props;
@@ -57,7 +42,7 @@ function PartySeats(props) {
                   }}
                   disableClearable
                   inputValue={seat.party}
-                  options={parties(seat.nationalsCandidate)}
+                  options={partyCandidates(seat.nationalsCandidate)}
                 // eslint-disable-next-line react/jsx-props-no-spreading
                   renderInput={(params) => <TextField {...params} size="small" label="Change Party" variant="outlined" />}
                 />
